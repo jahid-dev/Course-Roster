@@ -15,7 +15,7 @@ function App() {
   const [sumPrice, setSumPrice] = useState(0);
 
   useEffect(() =>{
-      fetch('tutorials.json')
+      fetch('./tutorials.json')
       .then((res) => res.json()) 
       .then((data) => setTutorials(data));
   }, []);
