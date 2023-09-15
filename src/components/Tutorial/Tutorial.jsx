@@ -2,7 +2,7 @@
 import { BiBookOpen } from "react-icons/bi";
 import { FiDollarSign } from "react-icons/fi";
 
-const Tutorial = ({tutorials}) => {
+const Tutorial = ({tutorials, SelectTutorialEvent}) => {
     return (
         <>
             {tutorials.map((tutorial) => (
@@ -20,7 +20,7 @@ const Tutorial = ({tutorials}) => {
                             <span className="text-[#1C1B1B99]">Credit : {tutorial.credit}hr</span>
                         </div>
                     </div>
-                    <button className="text-lg text-center px-5 py-3  bg-[#2F80ED] w-full hover:bg-blue-800 rounded-md mx-auto block text-[#FFFFFF] font-semibold">
+                    <button onClick={() => SelectTutorialEvent(tutorial)} className="text-lg text-center px-5 py-3  bg-[#2F80ED] w-full hover:bg-blue-800 rounded-md mx-auto block text-[#FFFFFF] font-semibold">
                     Select
                     </button>
                 </div>
